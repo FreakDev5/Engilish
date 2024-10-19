@@ -1,0 +1,53 @@
+
+import random
+
+words = {
+    "friendship": "arkadaşlık",
+    "loyal": "sadık",
+    "trust": "güven",
+    "honesty": "dürüstlük",
+    "support": "destek",
+    "understanding": "anlayış",
+    "forgive": "affetmek",
+    "respect": "saygı",
+    "share": "paylaşmak",
+    "empathy": "empati",
+    "kindness": "nezaket",
+    "helpful": "yardımsever",
+    "companionship": "arkadaşlık",
+    "truthful": "doğru",
+    "close friend": "yakın arkadaş",
+    "argue": "tartışmak",
+    "agree": "katılmak",
+    "disagree": "katılmamak",
+    "loyalty": "sadakat",
+    "reliable": "güvenilir",
+    "apologize": "özür dilemek",
+    "make up": "barışmak",
+    "break up": "ayrılmak",
+    "conflict": "anlaşmazlık",
+    "get along": "iyi geçinmek",
+}
+
+print("8. Sınıf İngilizce 'Friendship' Ünitesi Kelime Öğrenme Programına Hoş Geldiniz!")
+print("Size bir İngilizce kelime vereceğim, doğru Türkçe anlamını tahmin edin.\n")
+
+correct_answers = 0
+wrong_answers = 0
+
+word_list = list(words.items())
+random.shuffle(word_list)
+
+for english_word, turkish_word in word_list:
+    user_answer = input(f"'{english_word}' kelimesinin Türkçe anlamı nedir? ")
+
+    if user_answer.lower() == turkish_word:
+        print("Doğru! :)")
+        correct_answers += 1
+    else:
+        print(f"Yanlış! Doğru cevap: {turkish_word}\n")
+        wrong_answers += 1
+
+print("\nDers sona erdi!")
+print(f"Toplam doğru cevaplar: {correct_answers}")
+print(f"Toplam yanlış cevaplar: {wrong_answers}")
